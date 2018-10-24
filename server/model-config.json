@@ -37,6 +37,14 @@
   },
   "score": {
     "dataSource": "db",
-    "public": true
+    "public": true,
+    "options": {
+      "remoting": {
+        "sharedMethods": {
+          "*": false,
+          "create": true
+        }
+      }
+    }
   }
 }
