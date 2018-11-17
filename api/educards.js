@@ -61,6 +61,44 @@ class Educards {
     console.log('Se ha eliminado la carta: ' + cardTittle + ' con exito.');
   }
 
+ // playerData: objeto JS con los datos necesarios para crear un jugador
+  //   playerData.name (string)
+  //   playerData.year (string)
+  //   playerData.imagen (string)
+  //   playerData.password (string)
+  // retorna: el nuevo jugador creado
+  addPlayer(playerData)
+  {
+  // Crea un jugador y lo agrega a Educards.
+  /*
+  El objeto player creado debe soportar (al menos):
+    - una propiedad name (string)
+    - una propiedad year (int)
+    - una propiedad imagen (string)
+    - una propiedad passsword (string)
+  */
+    const newPlayer = new Player (this.getId(),playerData.name, parseInt(playerData.year), playerData.image, playerData.password);
+    this.admPlayers.addPlayer(newPlayer);
+    return newPlayer;
+  }
+
+  // Elimina el jugador con el nombre playerName.
+  removePlayer(playerName)
+  {
+    this.admPlayers.removePlayer(playerName);
+    console.log('Se ha dado de baja al jugador: ' + playerName + ' con exito.');
+    console.log('¡Vuelva pronto! :)');
+  }
+
+  searchPlayer(playerName)
+  {
+    return this.admPlayers.findPlayerByName(playerName);
+  }
+
+  hasPlayerToAdd(playerName)
+  {
+    return this.admPlayers.hasPlayerToAdd(playerName);
+  }
 
   save(filetittle) 
   {

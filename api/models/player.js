@@ -34,6 +34,20 @@ class Player
     return this.name;
   }
 
+hasPass(playerPass)
+  {
+    return this.password === playerPass;
+  }
+
+  hasName(playerName)
+  {
+    return this.name === playerName;   
+  }
+
+  hasId(playerId){
+    return this.id === playerId;    
+  }
+
 }
 
 module.exports = Player;

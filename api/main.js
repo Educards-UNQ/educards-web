@@ -54,6 +54,41 @@ function main() {
     console.log(educards.getCards());
     saveEducards(educards);
   }
+
+// Listar todos los jugadores
+  if (args[0] === 'getPlayers')
+  {
+    const educards = getEducards();
+    educards.getPlayers();
+    console.log("All the players:");
+    console.log(educards.getPlayers());
+    saveEducards(educards);
+  }
+
+  // Registrar un jugador
+  if (args[0] === 'addPlayer')
+  {
+    const educards = getEducards();
+    educards.addPlayer(
+      {
+        name: args[1],
+        year: args[2],
+        image: args[3],
+        password: args[4],
+      }
+    );
+    saveEducards(educards);
+    console.log('Player successfully added.');
+  }
+
+  // Eliminar un jugador
+  if (args[0] === 'removePlayer')
+  {
+    const educards = getEducards();
+    educards.removePlayer(args[1]);
+    saveEducards(educards);
+    console.log('Card successfully removed.');
+  }
 }
 
 main();
