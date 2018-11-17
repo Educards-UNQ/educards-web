@@ -35,6 +35,33 @@ class Educards {
   }
 
 
+  // cardData: objeto JS con los datos necesarios para crear una carta
+  //   cardData.tittle (string)
+  //   cardData.story (string)
+  //   cardData.year (string)
+  // retorna: la nueva carta creada
+  addCard(cardData) 
+  {
+  // Crea una carta y lo agrega a Educards.
+  /*
+  El objeto card creado debe soportar (al menos):
+    - una propiedad tittle (string)
+    - una propiedad story (string)
+    - una propiedad year (Int)
+  */
+    const newCard = new Card(this.getId(),cardData.tittle, cardData.story, parseInt(cardData.year));
+    this.admCards.addCard(newCard);
+    return newCard;
+  }
+
+  // Elimina la carta con el titulo cardTittle.
+  removeCard(cardTittle)
+  {
+    this.admCards.removeCard(cardTittle);
+    console.log('Se ha eliminado la carta: ' + cardTittle + ' con exito.');
+  }
+
+
   save(filetittle) 
   {
     const listenersBkp = this.listeners;

@@ -22,6 +22,15 @@ class Card {
     return this.tittle;
   }
 
+ hasTittle(cardTittle)
+  {
+    return this.tittle === cardTittle;
+  }
+
+  hasId(id){
+    return this.id === id;
+  }
+
 }
 
 module.exports = Card;
