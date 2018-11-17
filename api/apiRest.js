@@ -19,7 +19,7 @@ console.log('Magic happens on port ' + port);
 
 // <*><*><*><*><*> PERSISTENCIA DE DATOS <*><*><*><*><*>
 
-// Retorna una instancia de UNQfy. Si existe filename, recupera la instancia desde el archivo.
+// Retorna una instancia de Educards. Si existe filename, recupera la instancia desde el archivo.
 function getEducards(filename = 'data.json') 
 {
   let educards = new educardsMod.Educards();
