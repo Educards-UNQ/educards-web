@@ -1,0 +1,92 @@
+{
+  "rootObjects": [
+    {
+      "id": "__00001__",
+      "name": null
+    }
+  ],
+  "objects": {
+    "__00001__": {
+      "admCards": "__00002__",
+      "admPlayers": "__00003__",
+      "ids": 9,
+      "listeners": "__00004__"
+    },
+    "__00002__": {
+      "cards": "__00005__"
+    },
+    "__00003__": {
+      "players": "__00006__"
+    },
+    "__00004__": {},
+    "__00005__": {
+      "0": "__00007__",
+      "1": "__00008__",
+      "2": "__00009__",
+      "3": "__00010__",
+      "4": "__00011__"
+    },
+    "__00006__": {
+      "0": "__00012__"
+    },
+    "__00007__": {
+      "id": 1,
+      "tittle": "Creacion de la Mona Lisa",
+      "story": "Cuadro pintado por Leonardo Da Vinci, es considerado el cuadro más famoso de la historia",
+      "year": 1503
+    },
+    "__00008__": {
+      "id": 2,
+      "tittle": "Adolf Hittler asume la presidencia de Alemania",
+      "story": "Adolf Hittler fue el líder del partido Nazi, y quien dirigió a Alemania durante la segunda guerra mundial",
+      "year": 1934
+    },
+    "__00009__": {
+      "id": 3,
+      "tittle": "Asesinato de Abraham Lincoln",
+      "story": "El decimosexto presidente de los Estados Unidos, fue asesinado en el teatro Ford a manos de John Booth",
+      "year": 1865
+    },
+    "__00010__": {
+      "id": 4,
+      "tittle": "Nacimiento de Ludwig Van Beethoven",
+      "story": "Es uno de los compositores más importantes de la historia de la música, su obra más famosa es Para Elisa",
+      "year": 1770
+    },
+    "__00011__": {
+      "id": 5,
+      "tittle": "Inauguracion de la Torre Eiffel",
+      "story": "La Torre Eiffel, ubicada en París, Francia, es uno de los monumentos más icónicos del mundo",
+      "year": 1889
+    },
+    "__00012__": {
+      "id": 9,
+      "year": 24,
+      "name": "Liza",
+      "image": "default.png",
+      "password": "1234",
+      "rankings": "__00013__",
+      "bestRank": 120
+    },
+    "__00013__": {
+      "0": 100,
+      "1": 120,
+      "2": 60
+    }
+  },
+  "types": {
+    "__00001__": "Educards",
+    "__00002__": "AdmCards",
+    "__00003__": "AdmPlayers",
+    "__00004__": "Array",
+    "__00005__": "Array",
+    "__00006__": "Array",
+    "__00007__": "Card",
+    "__00008__": "Card",
+    "__00009__": "Card",
+    "__00010__": "Card",
+    "__00011__": "Card",
+    "__00012__": "Player",
+    "__00013__": "Array"
+  }
+}
