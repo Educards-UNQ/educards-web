@@ -5,8 +5,8 @@ const Player = require('./models/player.js');
 const AdmCards = require('./models/admCards.js');
 const AdmPlayers = require('./models/admPlayers.js');
 
-class Educards {
-
+class Educards 
+{
   constructor() 
   {
     this.admCards = new AdmCards();
@@ -14,7 +14,7 @@ class Educards {
     this.ids = 0;
   }
   
-// returna: Una identificación irrepetible.
+  // returna: Una identificación irrepetible.
   getId()
   {
     this.ids++;
@@ -61,7 +61,7 @@ class Educards {
     console.log('Se ha eliminado la carta: ' + cardTittle + ' con exito.');
   }
 
- // playerData: objeto JS con los datos necesarios para crear un jugador
+  // playerData: objeto JS con los datos necesarios para crear un jugador
   //   playerData.name (string)
   //   playerData.year (string)
   //   playerData.imagen (string)
@@ -137,4 +137,6 @@ class Educards {
   
 }
 
-module.exports = Educards;
+module.exports = {
+  Educards,
+};
