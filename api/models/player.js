@@ -8,6 +8,8 @@ class Player
     this.name = name;
     this.image = imagen;
     this.password = password;
+    this.rankings = [];
+    this.bestRank = 0;
   }
 
   getYear()
@@ -34,6 +36,16 @@ class Player
     return this.name;
   }
 
+getRankings()
+  {
+    return this.rankings;
+  }
+
+  getBestRank()
+  {
+    return this.bestRank;
+  }
+
 hasPass(playerPass)
   {
     return this.password === playerPass;
@@ -46,6 +58,15 @@ hasPass(playerPass)
 
   hasId(playerId){
     return this.id === playerId;    
+  }
+
+addRank(newRank)
+  {
+    this.rankings.push(newRank);
+    if (newRank > this.bestRank)
+    {
+      this.bestRank = newRank;
+    }
   }
 
 }

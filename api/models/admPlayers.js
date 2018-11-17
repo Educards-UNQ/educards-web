@@ -1,3 +1,5 @@
+const Ranking = require('./ranking.js');
+
 class AdmPlayers
 {
   constructor() 
@@ -50,6 +52,21 @@ addPlayer(newPlayer)
     {
       throw new Error('No se encontró el jugador con el nombre: ' + playerName);
     }
+  }
+
+  getRankingFromPlayer(playerId)
+  {
+    return this.findPlayerById(playerId).getRankings();
+  }
+
+  getTheBestRankings()
+  {
+    return this.players.map(player => this.createRanking(player));
+  }
+
+  createRanking(player)
+  {
+    return new Ranking(player.getName(), player.getBestRank());
   }
 
 }

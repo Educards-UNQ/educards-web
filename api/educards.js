@@ -100,6 +100,22 @@ class Educards {
     return this.admPlayers.hasPlayerToAdd(playerName);
   }
 
+  addRank(playerId, playerRank)
+  {
+    this.admPlayers.addRank(parseInt(playerId), parseInt(playerRank));
+  }
+
+  getRankingFromPlayer(playerId)
+  {
+    return this.admPlayers.getRankingFromPlayer(parseInt(playerId));
+  }
+
+  getTheBestRankings()
+  {
+    return this.admPlayers.getTheBestRankings();
+  }
+
+
   save(filetittle) 
   {
     const listenersBkp = this.listeners;
