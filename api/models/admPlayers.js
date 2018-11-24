@@ -12,7 +12,7 @@ class AdmPlayers
     return this.players;
   }
 
-addPlayer(newPlayer)
+  addPlayer(newPlayer)
   {
     if (this.hasPlayerToAdd(newPlayer.getName()))
     {
@@ -69,6 +69,35 @@ addPlayer(newPlayer)
     return new Ranking(player.getName(), player.getBestRank());
   }
 
+  // Edita el perfil del jugador con la identificacion idPlayer
+  editProfile(idPlayer, newName, newYear, newPassword)
+  {
+    this.validateEditPlayerName(idPlayer, newName);
+    const editPlayer = this.findPlayerById(idPlayer);
+    editPlayer.editProfile(newName, newYear, newPassword);
+  }
+
+  // retorna: un jugador con la identificacion playerId
+  findPlayerById(playerId)
+  {
+    return this.players.find(player => player.hasId(playerId));
+  }
+
+  // retorna: una excepcion si el nombre newName ya esta siendo usado por un jugadore que no tenga la id idPlayer
+  validateEditPlayerName(idPlayer, newName)
+  {
+    if (this.hasAnyPlayerName(idPlayer, newName))
+    {
+      throw new Error("ERROR DE EDICION: Ya existe un jugador con el nombre " + newName);
+    } 
+  }
+
+  // retorna: True si existe un jugador con el nombre newName que no sea de identificacion idPlayer.
+  hasAnyPlayerName(idPlayer, newName) 
+  {
+    const foundPlayer = this.findPlayerByName(newName);
+    return foundPlayer !== undefined && (!foundPlayer.hasId(idPlayer) );
+  }
 }
 
 module.exports = AdmPlayers;

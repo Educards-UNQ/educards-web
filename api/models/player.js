@@ -36,7 +36,7 @@ class Player
     return this.name;
   }
 
-getRankings()
+  getRankings()
   {
     return this.rankings;
   }
@@ -46,7 +46,7 @@ getRankings()
     return this.bestRank;
   }
 
-hasPass(playerPass)
+  hasPass(playerPass)
   {
     return this.password === playerPass;
   }
@@ -60,7 +60,7 @@ hasPass(playerPass)
     return this.id === playerId;    
   }
 
-addRank(newRank)
+  addRank(newRank)
   {
     this.rankings.push(newRank);
     if (newRank > this.bestRank)
@@ -69,6 +69,12 @@ addRank(newRank)
     }
   }
 
+  editProfile(newName, newYear, newPassword)
+  {
+    this.name = newName;
+    this.year = newYear;
+    this.password = newPassword;
+  }
 }
 
 module.exports = Player;
