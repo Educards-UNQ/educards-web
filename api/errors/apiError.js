@@ -53,6 +53,12 @@ class WrongPasswordError extends ApiError{
   }
 }
 
+class InvalidNameError extends ApiError{
+  constructor(name){
+    super('El nombre ' + name + ' ya esta en uso',  409, 'RESOURCE_ALREADY_EXISTS');    
+  }
+}
+
 module.exports = {
   ApiError,
   InvalidOrUnexistingURLError,
@@ -62,4 +68,5 @@ module.exports = {
   UnexistingPlayerError,
   WrongPasswordError,
   PlayerHasAlreadyBeenRegisteredError,
+  InvalidNameError,
 };
