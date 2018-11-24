@@ -160,6 +160,32 @@ router.route('/rankings').post(function (req, res)
   saveEducards(educards);
 });
 
+// Editar el perfil de un jugador
+router.route('/players/:id').put(function(req, res)
+{
+  const idPlayer = parseInt(req.params.id);
+  const newProfile = req.body;
+
+  const educards = getEducards();
+  if (educards.hasValidName(newProfile.name))
+  {
+    throw new errors.InvalidNameError(newProfile.name);
+  }
+  educards.editProfile(idPlayer, newProfile.name, newProfile.year, newProfile.password);
+  const foundPlayer = educards.searchPlayer(newProfile.name);
+  const player = 
+  {
+    id: foundPlayer.getId(), 
+    name: foundPlayer.getName(), 
+    year: foundPlayer.getYear(), 
+    image: foundPlayer.getImage(), 
+    password: foundPlayer.getPassword(),
+  };
+  res.status(201);
+  res.json(player);
+  saveEducards(educards);
+});
+
 // Obtener los mejores rakings de todos los jugadores.
 router.route('/rankings').get(function (req, res)
 {

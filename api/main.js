@@ -22,7 +22,7 @@ function main() {
 
   const args = process.argv.slice(2);
 
-// Agregar una carta
+  // Agregar una carta
   if (args[0] === 'addCard')
   {
     const educards = getEducards();
@@ -55,7 +55,7 @@ function main() {
     saveEducards(educards);
   }
 
-// Listar todos los jugadores
+  // Listar todos los jugadores
   if (args[0] === 'getPlayers')
   {
     const educards = getEducards();
@@ -87,7 +87,16 @@ function main() {
     const educards = getEducards();
     educards.removePlayer(args[1]);
     saveEducards(educards);
-    console.log('Card successfully removed.');
+    console.log('Player successfully removed.');
+  }
+
+  // Editar un jugador
+  if (args[0] === 'editPlayer')
+  {
+    const educards = getEducards();
+    educards.editProfile(args[1], args[2], args[3], args[4]);
+    saveEducards(educards);
+    console.log('Player successfully edited.');
   }
 }
 
