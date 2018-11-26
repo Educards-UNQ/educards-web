@@ -7,7 +7,7 @@ Juego de cartas interactivo que busca modificar la forma en la que las personas 
     git clone https://github.com/Educards-UNQ/educards-web.git
     npm install
     npm install -s request-promise request
-	node apiRest.js
+	npm start
 	curl -v -X GET http://localhost:8080/api/
 	
 ## Funcionamiento
