@@ -1,33 +1,25 @@
 {
-  "name": "educards-server",
+  "name": "unqfy",
   "version": "1.0.0",
-  "main": "server/server.js",
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "lint": "eslint .",
-    "start": "node .",
-    "posttest": "npm run lint"
-  },
+  "description": "",
+  "main": "main.js",
   "dependencies": {
-    "compression": "^1.0.3",
-    "cors": "^2.5.2",
-    "helmet": "^3.10.0",
-    "loopback-boot": "^2.6.5",
-    "serve-favicon": "^2.0.1",
-    "strong-error-handler": "^3.0.0",
-    "loopback-component-explorer": "^6.2.0",
-    "loopback": "^3.22.0"
+    "chai": "^4.1.2",
+    "express": "^4.16.4",
+    "picklejs": "github:lwoites/picklejs",
+    "picklify": "^1.0.1",
+    "request": "^2.88.0",
+    "u": "^0.1.0"
   },
   "devDependencies": {
-    "eslint": "^3.17.1",
-    "eslint-config-loopback": "^8.0.0"
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.10.0",
+    "mocha": "^5.0.5"
   },
-  "repository": {
-    "type": "",
-    "url": ""
+  "scripts": {
+    "test": "mocha"
   },
-  "license": "UNLICENSED",
-  "description": "educards-server"
+  "author": "",
+  "license": "ISC"
 }
