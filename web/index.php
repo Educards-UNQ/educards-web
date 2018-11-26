@@ -144,93 +144,45 @@
     </div>
     <!-- // end .section -->
 
-
+    <?php
+    // Función para llamar al webservice y devolver el resultado en un array
+    function callWebService($method){
+        $url ='https://educards-unq.herokuapp.com/api/rankings';
+        $json = file_get_contents($url);
+        $array = json_decode($json,true);
+        return $array;
+    }
+    ?>
     <div class="section light-bg">
         <div class="container">
             <div class="section-title">
-                <small>FEATURES</small>
-                <h3>Do more with our app</h3>
+                <small>JUGADORES</small>
+                <h3>ranking</h3>
             </div>
-
-            <ul class="nav nav-tabs nav-justified" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#communication">Communication</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#schedule">Scheduling</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#messages">Messages</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#livechat">Live Chat</a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div class="tab-pane fade show active" id="communication">
-                    <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
-                        <div>
-
-                            <h2>Communicate with ease</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="schedule">
-                    <div class="d-flex flex-column flex-lg-row">
-                        <div>
-                            <h2>Scheduling when you want</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
-                            </p>
-                        </div>
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="messages">
-                    <div class="d-flex flex-column flex-lg-row">
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
-                        <div>
-                            <h2>Realtime Messaging service</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="livechat">
-                    <div class="d-flex flex-column flex-lg-row">
-                        <div>
-                            <h2>Live chat when you needed</h2>
-                            <p class="lead">Uniquely underwhelm premium outsourcing with proactive leadership skills. </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
-                            </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
-                            </p>
-                        </div>
-                        <img src="images/graphic.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
-                    </div>
-                </div>
+            <div>
+                <center>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td><strong>&nbsp;&nbsp;Nombre&nbsp;&nbsp;</strong></td>
+                                <td><strong>&nbsp;&nbsp;Puntos&nbsp;&nbsp;</strong></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $resul = callWebService();
+                            foreach($resul['geonames'] as $city){
+                                $cities .= '<tr><td>&nbsp;&nbsp;'.$city['playerName'].'&nbsp;&nbsp;</td><td>&nbsp;&nbsp;'.$city['rank'].'&nbsp;&nbsp;</td></tr>';    
+                            }
+                            print_r ($cities); ?>
+                            <tr>
+                                <td>&nbsp;&nbsp;Pato&nbsp;&nbsp;</td>
+                                <td>&nbsp;&nbsp;100&nbsp;&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </center>
             </div>
-
-
         </div>
     </div>
     <!-- // end .section -->
@@ -308,6 +260,7 @@
                 <img src="images/app/juego.jpg" alt="image">
                 <img src="images/app/login.jpg" alt="image">
                 <img src="images/app/profile.jpg" alt="image">
+                <img src="images/app/juego.jpg" alt="image">
             </div>
 
         </div>
