@@ -7,7 +7,7 @@ Juego de cartas interactivo que busca modificar la forma en la que las personas 
     git clone https://github.com/Educards-UNQ/educards-web.git
     npm install
     npm install -s request-promise request
-	node apiRest.js
+	npm start
 	curl -v -X GET http://localhost:8080/api/
 	
 ## Funcionamiento
@@ -36,4 +36,6 @@ Juego de cartas interactivo que busca modificar la forma en la que las personas 
 |Fallo inesperado | 500 | {status: 500, errorCode: "INTERNAL_SERVER_ERROR"} |
 
 
+## API Publica Abierta
 
+En la version actual ofrecemos una api publica abierta para ser utilizada o para probar la aplicacion sin levantar la api uno mismo la misma se puede acceder desde https://educards-unq.herokuapp.com/
