@@ -146,7 +146,7 @@
 
     <?php
     // Función para llamar al webservice y devolver el resultado en un array
-    function callWebService($method){
+    function callWebService(){
         $url ='https://educards-unq.herokuapp.com/api/rankings';
         $json = file_get_contents($url);
         $array = json_decode($json,true);
@@ -171,14 +171,11 @@
                         <tbody>
                             <?php
                             $resul = callWebService();
-                            foreach($resul['geonames'] as $city){
+                            $cities = '';
+                            foreach($resul as $city){
                                 $cities .= '<tr><td>&nbsp;&nbsp;'.$city['playerName'].'&nbsp;&nbsp;</td><td>&nbsp;&nbsp;'.$city['rank'].'&nbsp;&nbsp;</td></tr>';    
                             }
                             print_r ($cities); ?>
-                            <tr>
-                                <td>&nbsp;&nbsp;Pato&nbsp;&nbsp;</td>
-                                <td>&nbsp;&nbsp;100&nbsp;&nbsp;</td>
-                            </tr>
                         </tbody>
                     </table>
                 </center>
