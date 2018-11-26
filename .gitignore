@@ -88,12 +88,9 @@ node_modules/*
 jspm_packages/
 
 package-lock.json
-package.json
 .package-lock.json
-.package.json
 
 ./package-lock.json
-./package.json
 
 # Optional eslint cache
 .eslintcache
