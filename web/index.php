@@ -6,8 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Mobland - Mobile App Landing Page Template">
-    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, ios, android, responsive">
+    <meta name="description" content="Educards, un juego para aprender jugando. ¡No esperes un minuto mas y descargalo ya!">
+    <meta name="keywords" content="HTML5, bootstrap, mobile, app, landing, android, responsive, educards, unq,">
 
     <!-- Font -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
