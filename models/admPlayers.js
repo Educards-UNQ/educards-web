@@ -70,11 +70,11 @@ class AdmPlayers
   }
 
   // Edita el perfil del jugador con la identificacion idPlayer
-  editProfile(idPlayer, newName, newYear, newPassword)
+  editProfile(idPlayer, newName, newAge, newPassword)
   {
     this.validateEditPlayerName(idPlayer, newName);
     const editPlayer = this.findPlayerById(idPlayer);
-    editPlayer.editProfile(newName, newYear, newPassword);
+    editPlayer.editProfile(newName, newAge, newPassword);
   }
 
   // retorna: un jugador con la identificacion playerId
