@@ -310,18 +310,18 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
                             <h2>Nuestras Cartas</h2>
-                            <div class="card-deck">
+                            <div class="row">
                                 <?php $resul = callWebServiceCard();
                                     $cities = '';
                                     foreach($resul as $city){
-                                        $cities .= '<div class="card">'
-                                        $cities .= '<img class="card-img-top" src="/images/cards/'.$city['id'].'.png" alt="Card image cap">'
-                                        $cities .= '<div class="card-body">'
-                                        $cities .= '<h5 class="card-title">'.$city['tittle'].'</h5>'
-                                        $cities .= '<p class="card-text">'.$city['story'].'</p>'
-                                        $cities .= '</div><div class="card-footer">'
-                                        $cities .= '<small class="text-muted">'.$city['year'].'</small>'
-                                        $cities .= '</div></div>'
+                                        $cities .= '<div class="card w-50" style="margin-bottom: 5px; margin-top: 5px;">';
+                                        $cities .= '<img class="card-img-top" src="/images/cards/'.$city['id'].'.png" alt="Card image cap">';
+                                        $cities .= '<div class="card-body">';
+                                        $cities .= '<h5 class="card-title">'.$city['tittle'].'</h5>';
+                                        $cities .= '<p class="card-text">'.$city['story'].'</p>';
+                                        $cities .= '</div><div class="card-footer">';
+                                        $cities .= '<small class="text-muted">'.$city['year'].'</small>';
+                                        $cities .= '</div></div>';
                                     }
                                     print_r ($cities); ?>
                             </div>
