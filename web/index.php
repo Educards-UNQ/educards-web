@@ -32,13 +32,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="img-fluid" alt="logo"></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <a class="navbar-brand" href="index.php">EDUCARDS UNQ</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="#home">INICIO <span class="sr-only">(current)</span></a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#features">CARACTERISTICAS</a> </li>
+                                <li class="nav-item"> <a class="nav-link" href="#juego">SOBRE EL JUEGO</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
-                                <li class="nav-item"> <a class="nav-link" href="#contact">CONTACT</a> </li>
                                 <li class="nav-item"><a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Descargar</a></li>
                             </ul>
                         </div>
@@ -144,47 +144,7 @@
     </div>
     <!-- // end .section -->
 
-    <?php
-    // Función para llamar al webservice y devolver el resultado en un array
-    function callWebService(){
-        $url ='https://educards-unq.herokuapp.com/api/rankings';
-        $json = file_get_contents($url);
-        $array = json_decode($json,true);
-        return $array;
-    }
-    ?>
     <div class="section light-bg">
-        <div class="container">
-            <div class="section-title">
-                <small>JUGADORES</small>
-                <h3>ranking</h3>
-            </div>
-            <div>
-                <center>
-                    <table>
-                        <thead>
-                            <tr>
-                                <td><strong>&nbsp;&nbsp;Nombre&nbsp;&nbsp;</strong></td>
-                                <td><strong>&nbsp;&nbsp;Puntos&nbsp;&nbsp;</strong></td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $resul = callWebService();
-                            $cities = '';
-                            foreach($resul as $city){
-                                $cities .= '<tr><td>&nbsp;&nbsp;'.$city['playerName'].'&nbsp;&nbsp;</td><td>&nbsp;&nbsp;'.$city['rank'].'&nbsp;&nbsp;</td></tr>';    
-                            }
-                            print_r ($cities); ?>
-                        </tbody>
-                    </table>
-                </center>
-            </div>
-        </div>
-    </div>
-    <!-- // end .section -->
-
-    <div class="section">
 
         <div class="container">
             <div class="row">
@@ -206,7 +166,7 @@
     <!-- // end .section -->
 
     <!---->
-    <div class="section light-bg">
+    <div class="section">
 
         <div class="container">
             <div class="row">
@@ -245,6 +205,121 @@
 
     </div>
     <!-- // end .section -->
+
+    <?php
+    // Función para llamar al webservice y devolver el resultado en un array
+    function callWebService(){
+        $url ='https://educards-unq.herokuapp.com/api/rankings';
+        $json = file_get_contents($url);
+        $array = json_decode($json,true);
+        return $array;
+    }
+    ?>
+
+    <div class="section light-bg" id="juego">
+        <div class="container">
+            <div class="section-title">
+                <small>ESPECIFICACIONES</small>
+                <h3>El Juego</h3>
+            </div>
+
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#rules">Reglas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#pasos">¿Como Jugar?</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#ranking">Ranking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#cards">Cartas</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="rules">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="https://image.flaticon.com/icons/png/512/831/831700.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0" style="max-width: 350px;">
+                        <div>
+
+                            <h2>Las Reglas del Juego</h2>
+                            <p class="lead">El juego se compone de unas basicas reglas faciles de seguir.</p>
+                            <p>Reglas
+Este juego se juega contra si mismo para obtener un puntaje, con cartas.
+Cada carta muestra un evento histórico, un invento o un descubrimiento en ambas caras pero con el año solo impreso por una de las dos.
+Se empieza con una cantidad de cartas en la mano, 5 en caso de una dificultad normal, luego se ordenan sobre la mesa, hasta tener una decisión, luego se continua con el calculo del puntaje. En el calculo del puntaje, se dan 20 puntos por cada carta puesta en su posicion correcta.
+                            </p>
+                            <p> 1 2 3 4 5 = 100 puntos 1 3 2 4 5 = 60 puntos 3 4 1 2 5 = 20 puntos Luego de esto se finaliza la partida y se procede a ponerlo en el ranking o no.
+La app contará con un sistema de puntuación y ranking entre los diferentes jugadores.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pasos">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div>
+                            <h2>¿Como jugar?</h2>
+                            <p class="lead">El juego es realmente simple y muy facil de aprender </p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
+                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
+                            </p>
+                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
+                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+                            </p>
+                        </div>
+                        <img src="https://image.flaticon.com/icons/png/512/52/52894.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0" style="max-width: 350px;">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="ranking">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="https://pngimage.net/wp-content/uploads/2018/06/top-rank-png-5.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0">
+                        <div class="table-responsive">
+                            <center>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col"><strong>&nbsp;&nbsp;Nombre&nbsp;&nbsp;</strong></th>
+                                            <th scope="col"><strong>&nbsp;&nbsp;Puntos&nbsp;&nbsp;</strong></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        $resul = callWebService();
+                                        $cities = '';
+                                        foreach($resul as $city){
+                                            $cities .= '<tr><td>&nbsp;&nbsp;'.$city['playerName'].'&nbsp;&nbsp;</td><td>&nbsp;&nbsp;'.$city['rank'].'&nbsp;&nbsp;</td></tr>';    
+                                        }
+                                        print_r ($cities); ?>
+                                    </tbody>
+                                </table>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="cards">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div>
+                            <h2>Nuestras Cartas</h2>
+                            <div class="container">
+                                <div class="card" style="width: 18rem;">
+                                    <img class="card-img-top" src="..." alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">Texto de las cartas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- // end .section -->
+
+
 
     <div class="section" id="gallery">
         <div class="container">
