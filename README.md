@@ -20,6 +20,7 @@ Juego de cartas interactivo que busca modificar la forma en la que las personas 
 | Obtener los mejores rankings | GET /api/rankings | | Status: 200 Json: [Ranking1, Ranking2, Ranking3]
 | Editar un jugador | PUT /api/players/<id> | Query: {name: Melody, year: 25, password: 1234} | Status: 201 Json: { "id": <idPlayer>,  "name”: "Melody", "year”: 25, "image”: "default.png", "password": "1234"} |
 | Crear una partida | POST /api/play | Query: cant: 5 theme: “Story” | Status: 201 Json: [card1, card2, card3, card4, card5] |
+| Obtener todas las cartas | GET /api/cards | Status: 200 Json:[Card1, Card2, Card3, Card4, Card5] |
 
 
 ## Registrode errores:
@@ -39,3 +40,6 @@ Juego de cartas interactivo que busca modificar la forma en la que las personas 
 ## API Publica Abierta
 
 En la version actual ofrecemos una api publica abierta para ser utilizada o para probar la aplicacion sin levantar la api uno mismo la misma se puede acceder desde https://educards-unq.herokuapp.com/
+
+## Web Online
+Podes ungresar a nuestra web online https://web-educards-unq.herokuapp.com/ 

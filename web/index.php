@@ -211,8 +211,15 @@
 
     <?php
     // Función para llamar al webservice y devolver el resultado en un array
-    function callWebService(){
+    function callWebServiceRank(){
         $url ='https://educards-unq.herokuapp.com/api/rankings';
+        $json = file_get_contents($url);
+        $array = json_decode($json,true);
+        return $array;
+    }
+
+    function callWebServiceCard(){
+        $url ='https://educards-unq.herokuapp.com/api/cards';
         $json = file_get_contents($url);
         $array = json_decode($json,true);
         return $array;
@@ -287,7 +294,7 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                                     </thead>
                                     <tbody>
                                         <?php
-                                        $resul = callWebService();
+                                        $resul = callWebServiceRank();
                                         $cities = '';
                                         foreach($resul as $city){
                                             $cities .= '<tr><td>&nbsp;&nbsp;'.$city['playerName'].'&nbsp;&nbsp;</td><td>&nbsp;&nbsp;'.$city['rank'].'&nbsp;&nbsp;</td></tr>';    
@@ -303,13 +310,20 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                     <div class="d-flex flex-column flex-lg-row">
                         <div>
                             <h2>Nuestras Cartas</h2>
-                            <div class="container">
-                                <div class="card" style="width: 18rem;">
-                                    <img class="card-img-top" src="..." alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text">Texto de las cartas</p>
-                                    </div>
-                                </div>
+                            <div class="row">
+                                <?php $resul = callWebServiceCard();
+                                    $cities = '';
+                                    foreach($resul as $city){
+                                        $cities .= '<div class="card w-50" style="margin-bottom: 5px; margin-top: 5px;">';
+                                        $cities .= '<img class="card-img-top" src="images/cards/'.$city['id'].'.png" alt="Card image cap">';
+                                        $cities .= '<div class="card-body">';
+                                        $cities .= '<h5 class="card-title">'.$city['tittle'].'</h5>';
+                                        $cities .= '<p class="card-text">'.$city['story'].'</p>';
+                                        $cities .= '</div><div class="card-footer">';
+                                        $cities .= '<small class="text-muted">'.$city['year'].'</small>';
+                                        $cities .= '</div></div>';
+                                    }
+                                    print_r ($cities); ?>
                             </div>
                         </div>
                     </div>
