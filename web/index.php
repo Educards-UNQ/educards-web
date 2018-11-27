@@ -315,7 +315,7 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                                     $cities = '';
                                     foreach($resul as $city){
                                         $cities .= '<div class="card w-50" style="margin-bottom: 5px; margin-top: 5px;">';
-                                        $cities .= '<img class="card-img-top" src="/images/cards/'.$city['id'].'.png" alt="Card image cap">';
+                                        $cities .= '<img class="card-img-top" src="images/cards/'.$city['id'].'.png" alt="Card image cap">';
                                         $cities .= '<div class="card-body">';
                                         $cities .= '<h5 class="card-title">'.$city['tittle'].'</h5>';
                                         $cities .= '<p class="card-text">'.$city['story'].'</p>';
