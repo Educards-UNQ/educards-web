@@ -72,7 +72,7 @@ function main() {
     educards.addPlayer(
       {
         name: args[1],
-        year: args[2],
+        age: args[2],
         image: args[3],
         password: args[4],
       }
