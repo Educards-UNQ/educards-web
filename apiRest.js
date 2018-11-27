@@ -197,3 +197,13 @@ router.route('/rankings').get(function (req, res)
   saveEducards(educards);
 });
 
+// Obtener todas las cartas.
+router.route('/cards').get(function (req, res)
+{
+  const educards = getEducards();
+  const cards = educards.getCards();
+  res.status(200);
+  res.json(cards);
+ 
+});
+
