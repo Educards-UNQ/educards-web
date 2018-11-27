@@ -38,7 +38,7 @@ class Educards
   // cardData: objeto JS con los datos necesarios para crear una carta
   //   cardData.tittle (string)
   //   cardData.story (string)
-  //   cardData.year (string)
+  //   cardData.age (string)
   // retorna: la nueva carta creada
   addCard(cardData) 
   {
@@ -63,7 +63,7 @@ class Educards
 
   // playerData: objeto JS con los datos necesarios para crear un jugador
   //   playerData.name (string)
-  //   playerData.year (string)
+  //   playerData.age (string)
   //   playerData.imagen (string)
   //   playerData.password (string)
   // retorna: el nuevo jugador creado
@@ -73,11 +73,11 @@ class Educards
   /*
   El objeto player creado debe soportar (al menos):
     - una propiedad name (string)
-    - una propiedad year (int)
+    - una propiedad age (int)
     - una propiedad imagen (string)
     - una propiedad passsword (string)
   */
-    const newPlayer = new Player (this.getId(),playerData.name, parseInt(playerData.year), playerData.image, playerData.password);
+    const newPlayer = new Player (this.getId(),playerData.name, parseInt(playerData.age), playerData.image, playerData.password);
     this.admPlayers.addPlayer(newPlayer);
     return newPlayer;
   }
@@ -105,9 +105,9 @@ class Educards
     this.admPlayers.addRank(parseInt(playerId), parseInt(playerRank));
   }
 
-  editProfile(idPlayer, newName, newYear, newPassword)
+  editProfile(idPlayer, newName, newAge, newPassword)
   {
-    this.admPlayers.editProfile(parseInt(idPlayer), newName, parseInt(newYear), newPassword);
+    this.admPlayers.editProfile(parseInt(idPlayer), newName, parseInt(newAge), newPassword);
   }
 
   hasValidName(newName)

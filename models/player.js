@@ -1,10 +1,10 @@
 class Player 
 {
 
-  constructor(id, name, year, imagen, password)
+  constructor(id, name, age, imagen, password)
   {
     this.id = id;
-    this.year = year;
+    this.age = age;
     this.name = name;
     this.image = imagen;
     this.password = password;
@@ -12,9 +12,9 @@ class Player
     this.bestRank = 0;
   }
 
-  getYear()
+  getAge()
   {
-    return this.year;
+    return this.age;
   }
 
   getPassword()
@@ -69,10 +69,10 @@ class Player
     }
   }
 
-  editProfile(newName, newYear, newPassword)
+  editProfile(newName, newAge, newPassword)
   {
     this.name = newName;
-    this.year = newYear;
+    this.age = newAge;
     this.password = newPassword;
   }
 }
