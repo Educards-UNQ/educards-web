@@ -79,7 +79,7 @@ router.route('/players').post(function (req, res)
   const educards = getEducards();
 
   // Lanzar error si no se ingresaron los parámetros correctos.
-  if (data.name === undefined || data.year === undefined || data.image === undefined || data.password === undefined)
+  if (data.name === undefined || data.age === undefined || data.image === undefined || data.password === undefined)
   {
     throw new errors.InvalidJsonError();
   }
@@ -93,7 +93,7 @@ router.route('/players').post(function (req, res)
   {
     id: newPlayer.id, 
     name: newPlayer.name,
-    year: newPlayer.year,
+    age: newPlayer.age,
     image: newPlayer.image,
     password: newPlayer.password 
   };
@@ -132,7 +132,7 @@ router.route('/players').get(function (req, res)
   {
     id: foundPlayer.getId(), 
     name: foundPlayer.getName(), 
-    year: foundPlayer.getYear(), 
+    age: foundPlayer.getAge(), 
     image: foundPlayer.getImage(), 
     password: foundPlayer.getPassword(),
   };
@@ -171,13 +171,13 @@ router.route('/players/:id').put(function(req, res)
   {
     throw new errors.InvalidNameError(newProfile.name);
   }
-  educards.editProfile(idPlayer, newProfile.name, newProfile.year, newProfile.password);
+  educards.editProfile(idPlayer, newProfile.name, newProfile.age, newProfile.password);
   const foundPlayer = educards.searchPlayer(newProfile.name);
   const player = 
   {
     id: foundPlayer.getId(), 
     name: foundPlayer.getName(), 
-    year: foundPlayer.getYear(), 
+    age: foundPlayer.getAge(), 
     image: foundPlayer.getImage(), 
     password: foundPlayer.getPassword(),
   };
