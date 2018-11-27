@@ -21,6 +21,10 @@ class AdmPlayers
     this.players.push(newPlayer);
   }
 
+  addRank(playerId, playerRank){
+    this.findPlayerById(playerId).addRank(playerRank);
+  }
+
   // retorna: True si el jugador playerToAdd se encuentra registrado.
   hasPlayerToAdd(playerName)
   {
