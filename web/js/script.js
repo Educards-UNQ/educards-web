@@ -109,4 +109,7 @@ $(function() {
         });
     }
 
+    $('#exampleModalCenterTitle').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    });
 }); /* End Fn */

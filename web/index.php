@@ -43,6 +43,7 @@
                                 <li class="nav-item"> <a class="nav-link" href="#juego">SOBRE EL JUEGO</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
                                 <li class="nav-item"><a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Descargar</a></li>
+                                <li class="nav-item"><button type="button" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3" data-toggle="modal" data-target="#exampleModalCenter">Registrarse</button></li>
                             </ul>
                         </div>
                     </nav>
@@ -389,6 +390,41 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
     <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Registrarse</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="formularioReg">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nombre</label>
+                            <input type="text" class="form-control" id="name" placeholder="Pato">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Edad</label>
+                            <input type="number" class="form-control" id="year" placeholder="22">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Contraseña</label>
+                            <input type="password" class="form-control" id="password" placeholder="contraseña">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-success">Registrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 
