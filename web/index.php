@@ -13,6 +13,9 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/educards_logo.png" />
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Themify Icons -->
@@ -32,7 +35,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-dark navbar-expand-lg">
-                        <a class="navbar-brand" href="index.php">EDUCARDS UNQ</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <a class="navbar-brand" href="index.php"><img src="images/educards_logo.png" class="img-fluid" alt="logo" style="max-height: 50px;" /> EduCards UNQ</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
                         <div class="collapse navbar-collapse" id="navbar">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item"> <a class="nav-link active" href="#home">INICIO <span class="sr-only">(current)</span></a> </li>
@@ -131,8 +134,8 @@
             <div class="row">
                 <div class="col-lg-6 offset-lg-6">
                     <div class="box-icon"><span class="ti-mobile gradient-fill ti-3x"></span></div>
-                    <h2>Descubre Nuestra Aplicacion</h2>
-                    <p class="mb-4">Nuestra aplicacion es totalmente Open Source y puede ver su codigo y modificarlo cuando quieras! No dudes de aportar tus conocimientos</p>
+                    <h2>Descubre Nuestra Aplicación</h2>
+                    <p class="mb-4">¡Nuestra aplicación es totalmente Open Source, puedes ver su codigo y modificarlo cuando quieras! No dudes de aportar tus conocimientos</p>
                     <a href="https://github.com/Educards-UNQ" class="btn btn-primary">GitHub</a>
                 </div>
             </div>
@@ -154,8 +157,8 @@
                 <div class="col-md-6 d-flex align-items-center">
                     <div>
                         <div class="box-icon"><span class="ti-rocket gradient-fill ti-3x"></span></div>
-                        <h2>Potencia tu Conocimiento</h2>
-                        <p class="mb-4">Gracias al sistema de cuentas podes continuar tu expandiendo tu conocimiento desde diferentes dispositivos</p>
+                        <h2>Potencia tus Conocimientos</h2>
+                        <p class="mb-4">Gracias al sistema de cuentas podes continuar expandiendo tu conocimiento desde diferentes dispositivos</p>
                         </div>
                 </div>
             </div>
@@ -182,15 +185,15 @@
                         <li class="media my-4">
                             <div class="circle-icon mr-4">2</div>
                             <div class="media-body">
-                                <h5>Compartelo con Tus amigos</h5>
-                                <p>No hay nada mas divertido que desafiar a tus amigos, no esperes un minuto mas y comenza a desafiarlos a superarte en el ranking</p>
+                                <h5>Compartelo con tus amigos</h5>
+                                <p>No hay nada mas divertido que desafiar a tus amigos, no esperes un minuto mas ¡comenza a desafiarlos!</p>
                             </div>
                         </li>
                         <li class="media">
                             <div class="circle-icon mr-4">3</div>
                             <div class="media-body">
                                 <h5>Cambia tu forma de Aprender</h5>
-                                <p>Comienza a jugar en las diferentes categorias y aprende de una forma nueva y entretenida</p>
+                                <p>Comienza a jugar en las diferentes categorias, aprende de una forma nueva y entretenida</p>
                             </div>
                         </li>
                     </ul>
@@ -244,9 +247,8 @@
                         <div>
 
                             <h2>Las Reglas del Juego</h2>
-                            <p class="lead">El juego se compone de unas basicas reglas faciles de seguir.</p>
-                            <p>Reglas
-Este juego se juega contra si mismo para obtener un puntaje, con cartas.
+                            <p class="lead">El juego se compone de reglas faciles de seguir.</p>
+                            <p>Este juego se juega contra si mismo para obtener un puntaje, con cartas.
 Cada carta muestra un evento histórico, un invento o un descubrimiento en ambas caras pero con el año solo impreso por una de las dos.
 Se empieza con una cantidad de cartas en la mano, 5 en caso de una dificultad normal, luego se ordenan sobre la mesa, hasta tener una decisión, luego se continua con el calculo del puntaje. En el calculo del puntaje, se dan 20 puntos por cada carta puesta en su posicion correcta.
                             </p>
