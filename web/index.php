@@ -271,11 +271,11 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                         <div>
                             <h2>¿Como jugar?</h2>
                             <p class="lead">El juego es realmente simple y muy facil de aprender </p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum, urna eu pellentesque pretium, nisi nisi fermentum enim, et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante. Ut placerat dui eu nulla
-                                congue tincidunt ac a nibh. Mauris accumsan pulvinar lorem placerat volutpat. Praesent quis facilisis elit. Sed condimentum neque quis ex porttitor,
+                            <p>El jugador cuenta con un mazo de cinco cartas en mano con las cual jugar, estas cartas aparecen de modo aleatorio y desordenadas. El juego consiste en ordenar las cartas sobre el tablero en el lugar que correspondan. Las cartas deben ser ordenadas de menos a mayor, según la fecha de los hechos históricos ocurridos en las ilustraciones icónicas de las cartas. Para colocar una carta, tienes que presionarse una de las cartas de tu mano y arrastrarlas sobre cualquier cuadrante sobre el tablero, en el lugar en donde se quiera colocar, y soltarla.
                             </p>
-                            <p> malesuada faucibus augue aliquet. Sed elit est, eleifend sed dapibus a, semper a eros. Vestibulum blandit vulputate pharetra. Phasellus lobortis leo a nisl euismod, eu faucibus justo sollicitudin. Mauris consectetur, tortor
-                                sed tempor malesuada, sem nunc porta augue, in dictum arcu tortor id turpis. Proin aliquet vulputate aliquam.
+                            <p> Si tienes algún problema para poder identificar las cartas o no sabes cuándo ocurrieron ¡No te preocupes! Puedes explorar la historia de las cartas en la sección de 'Cartas' de esta misma página para poder conocer más de la historia detrás de ellas, y no volver a equivocarte. 
+                            </p>
+                            <p> Además de esto, solicitaremos que te registres para poder llevar un registro con todos los puntajes de tus mejores jugadas para poder competir contra otros jugadores en la sección de 'Ranking' ¿Qué estas esperando? ¡Desafía a tus amigos!
                             </p>
                         </div>
                         <img src="https://image.flaticon.com/icons/png/512/52/52894.png" alt="graphic" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0" style="max-width: 350px;">
