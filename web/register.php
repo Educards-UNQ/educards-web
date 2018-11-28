@@ -24,11 +24,9 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Main css -->
     <link href="css/style.css" rel="stylesheet">
-    <!-- Main css -->
-    <link href="css/registrook.css" rel="stylesheet">
 </head>
 
-<body class="text-center">
+<body data-spy="scroll" data-target="#navbar" data-offset="30">
 
 <?php /*
     $postdata = http_build_query(
@@ -85,41 +83,49 @@
     //close cURL resource
     curl_close($ch);
 
-    $cities = '<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">';
-
-    $cities .= '<header class="masthead mb-auto">';
-    $cities .= '<div class="inner">';
-    $cities .= '<nav class="nav nav-masthead justify-content-center">';
-    $cities .= '</nav>';
-    $cities .= '</div>';
-    $cities .= '</header>';
+    $cities = '<div class="nav-menu fixed-top">';
+    $cities .= '<div class="container">';
+    $cities .= '<div class="row">';
+    $cities .= '<div class="col-md-12">';
+    $cities .= '<nav class="navbar navbar-dark navbar-expand-lg">';
+    $cities .= '<a class="navbar-brand" href="index.php"><img src="images/educards_logo.png" class="img-fluid" alt="logo" style="max-height: 50px;" /> EduCards UNQ</a>';
+    $cities .= '<div class="collapse navbar-collapse" id="navbar">';
+    $cities .= '<ul class="navbar-nav ml-auto"></ul>';
+    $cities .= '</div></nav></div></div></div></div>';
+    $cities .= '<header class="bg-gradient" id="home">';
+    $cities .= '<div class="container mt-5">';
 
 
     if (isset($result['name'])){
-        $cities .= '<main role="main" class="inner cover bg-success">';
-        $cities .= '<h1 class="cover-heading">Bienvenido '.$result['name'].'</h1>';
-        $cities .= '<p class="lead">¡Ya puedes ingresar a la aplicacion y comenzar a divertirte! No esperes mas para pelear por el primer puesto de nuestro Ranking</p>';
-        $cities .= '<p class="lead">';
-        $cities .= '<a href="https://web-educards-unq.herokuapp.com/" class="btn btn-lg btn-secondary">Ir a Inicio</a>';
-        $cities .= '</p>';
-        $cities .= '</main>';
-
-        
+        $cities .= '<h1>Bienvenido '.$result['name'].'</h1>';
+        $cities .= '<p class="tagline">¡Ya puedes ingresar a la aplicacion y comenzar a divertirte! No esperes mas para pelear por el primer puesto de nuestro Ranking</p>';
+        $cities .= '<p class="tagline"><br />';
+        $cities .= '<a href="https://web-educards-unq.herokuapp.com/" class="btn btn-lg btn-primary">Ir a Inicio</a></p>'; 
     }else{
-        $cities .= '<main role="main" class="inner cover bg-danger">';
-        $cities .= '<h1 class="cover-heading">Lo sentimos '.$_POST['name'].'</h1>';
-        $cities .= '<p class="lead">Ocurrio un error, te recomendamos comunicarte con un administrador con el siguiente codigo de error: <br> <div class="alert alert-danger" role="alert">'.$result['errorCode'].'</div></p>';
-        $cities .= '<p class="lead">';
-        $cities .= '<a href="https://web-educards-unq.herokuapp.com/" class="btn btn-lg btn-secondary">Ir a Inicio</a>';
-        $cities .= '</p>';
-        $cities .= '</main>';
+        $cities .= '<h1>Lo sentimos '.$_POST['name'].'</h1>';
+        $cities .= '<p class="tagline">Ocurrio un error, te recomendamos comunicarte con un administrador con el siguiente codigo de error: <br /> <br /> <div class="alert alert-danger" role="alert">'.$result['errorCode'].'</div></p>';
+        $cities .= '<p class="tagline"><br />';
+        $cities .= '<a href="https://web-educards-unq.herokuapp.com/" class="btn btn-lg btn-primary">Ir a Inicio</a></p>';
     }
     $cities .= '</div>';
+    $cities .= '<div class="img-holder mt-3"><img src="images/iphonex.png" alt="phone" class="img-fluid"></div>';
+    $cities .= '</header>';
     print $cities;
 ?>
+    <footer class="my-5 text-center">
+        <!-- Copyright removal is not prohibited! -->
+        <p class="mb-2"><small>COPYRIGHT © 2018. ALL RIGHTS RESERVED. EDUCARDS TEMPLATE BY <a href="#">LYNX SOFTWARE DESIGN</a></small></p>
+
+        <small>
+            <a href="https://github.com/Educards-UNQ/" class="m-2">GITHUB</a>
+        </small>
+    </footer>
+
     <!-- jQuery and Bootstrap -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="js/owl.carousel.min.js"></script>
     <!-- Custom JS -->
     <script src="js/script.js"></script>
 </body>
