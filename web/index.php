@@ -406,15 +406,15 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nombre</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Pato">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Usuario">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Edad</label>
-                            <input type="number" class="form-control" id="year" name="year" placeholder="22">
+                            <input type="number" class="form-control" id="year" name="year" placeholder="Edad">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Contraseña</label>
-                            <input type="password" class="form-control" id="password" name="password" placeholder="contraseña">
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña">
                         </div>
                     </div>
                     <div class="modal-footer">
