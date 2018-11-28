@@ -42,7 +42,7 @@
                                 <li class="nav-item"> <a class="nav-link" href="#features">CARACTERISTICAS</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#juego">SOBRE EL JUEGO</a> </li>
                                 <li class="nav-item"> <a class="nav-link" href="#gallery">GALERIA</a> </li>
-                                <li class="nav-item"><a href="#" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Descargar</a></li>
+                                <li class="nav-item"><a href="#descarga" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3">Descargar</a></li>
                                 <li class="nav-item"><button type="button" class="btn btn-outline-light my-3 my-sm-0 ml-lg-3" data-toggle="modal" data-target="#exampleModalCenter">Registrarse</button></li>
                             </ul>
                         </div>
@@ -180,7 +180,7 @@
                             <div class="circle-icon mr-4">1</div>
                             <div class="media-body">
                                 <h5>Registrate</h5>
-                                <p>Registrate desde nuesta aplicacion. No vas a tardar mas de 5 minutos y solo necesitas un email valido</p>
+                                <p>Registrate desde la web o la aplicacion. No vas a tardar mas de 5 minutos y solo necesitas un email valido</p>
                             </div>
                         </li>
                         <li class="media my-4">
@@ -338,7 +338,7 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
 
 
 
-    <div class="section" id="gallery">
+    <div class="section"  >
         <div class="container">
             <div class="section-title">
                 <small>GALERIA</small>
@@ -357,7 +357,7 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
     </div>
     <!-- // end .section -->
 
-    <div class="section bg-gradient">
+    <div class="section bg-gradient" id="descarga">
         <div class="container">
             <div class="call-to-action">
 
@@ -365,7 +365,7 @@ La app contará con un sistema de puntuación y ranking entre los diferentes jug
                 <h2>Descargar</h2>
                 <p class="tagline">Disponible para Android, Descarga la aplicacion y comenza a aprender de una forma diferente y entretenida.</p>
                 <div class="my-4">
-                    <a href="https://github.com/Educards-UNQ/educards-android-app" class="btn btn-light"><img src="images/playicon.png" alt="icon"> GitHub </a>
+                    <a href="educards.apk" class="btn btn-light"><img src="images/playicon.png" alt="icon"> Descargar </a>
                 </div>
                 <p class="text-primary"><small><i>Disponible para Android Kitkat y posteriores. </i></small></p>
             </div>
