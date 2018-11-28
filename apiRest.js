@@ -10,6 +10,7 @@ const bodyParser = require('body-parser');
 const errors = require('./errors/apiError.js'); // api de errores
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({limit: '50mb'}));// para cargar imagenes de usuario
 app.use(bodyParser.json());
 app.use('/api', router);
 app.use(errorHandler); // Registramos un manejador de errores
