@@ -9,7 +9,7 @@
     "__00001__": {
       "admCards": "__00002__",
       "admPlayers": "__00003__",
-      "ids": 10,
+      "ids": 13,
       "listeners": "__00004__"
     },
     "__00002__": {
@@ -24,11 +24,14 @@
       "1": "__00008__",
       "2": "__00009__",
       "3": "__00010__",
-      "4": "__00011__"
+      "4": "__00011__",
+      "5": "__00012__",
+      "6": "__00013__",
+      "7": "__00014__"
     },
     "__00006__": {
-      "0": "__00012__",
-      "1": "__00013__"
+      "0": "__00015__",
+      "1": "__00016__"
     },
     "__00007__": {
       "id": 1,
@@ -61,29 +64,47 @@
       "year": 1889
     },
     "__00012__": {
+      "id": 11,
+      "tittle": "Descubrimiento de America",
+      "story": "Se denomina descubrimiento de América al acontecimiento histórico del 12 de octubre de 1492, consistente en la llegada a América de una expedición capitaneada por Cristóbal Colón por mandato de los Reyes Católicos, Isabel de Castilla y Fernando de Aragón. Colón había partido del Puerto de Palos dos meses y nueve días antes y, tras cruzar el océano Atlántico, llegó a una isla del continente americano, Guanahani, creyendo que había llegado a la India. Este hecho es uno de los momentos fundamentales de la historia universal y representa el encuentro de dos mundos que habían evolucionado independientemente desde el poblamiento de América. Varios años después de la llegada de Colón, los europeos fueron percatándose de que el lugar al que habían llegado no estaba conectado por tierra a Europa y el resto de la «tierra conocida», sino que formaba un continente distinto. A partir de 1507 se le comenzó a llamar América. En los siglos posteriores al descubrimiento del nuevo mundo, España, Portugal, Inglaterra, Francia, Holanda y otras potencias europeas, compitieron por la exploración, conquista y colonización del continente americano, e introdujeron como esclavos a millones de personas secuestradas en África, lo cual llevó a procesos de disolución y anomia de cultura milenarias, así como al surgimiento de nuevas conformaciones étnicas, culturales y políticas.",
+      "year": 1492
+    },
+    "__00013__": {
+      "id": 12,
+      "tittle": "Inauguracion de la Estatua de la Libertad",
+      "story": "La libertad iluminando el mundo (en inglés: Liberty Enlightening the World; en francés: La Liberté éclairant le monde), conocida como la Estatua de la Libertad, es uno de los monumentos más famosos de Nueva York, de los Estados Unidos y de todo el mundo. Se encuentra en la isla de la Libertad al sur de la isla de Manhattan, junto a la desembocadura del río Hudson y cerca de la isla Ellis. La Estatua de la Libertad fue un regalo del gobierno francés al gobierno estadounidense en 1886 para conmemorar el centenario de la Declaración de Independencia de los Estados Unidos y como un signo de amistad entre las dos naciones. Fue inaugurada el 28 de octubre de 1886 en presencia del presidente estadounidense de la época, Grover Cleveland. La estatua es obra del escultor francés Frédéric Auguste Bartholdi y la estructura interna fue diseñada por el ingeniero Alexandre Gustave Eiffel. El arquitecto francés Eugène Viollet-le-Duc se encargó de la elección de los cobres utilizados para la construcción de la estatua. El 15 de octubre de 1924, la estatua fue declarada como monumento nacional de los Estados Unidos y el 15 de octubre de 1965 se añadió la isla Ellis. Desde 1984 es considerada Patrimonio de la Humanidad por la Unesco.",
+      "year": 1886
+    },
+    "__00014__": {
+      "id": 13,
+      "tittle": "Inicio de la Segunda Guerra Mundial",
+      "story": "La Segunda Guerra Mundial (1939-1945) fue una contienda armada internacional que involucró a prácticamente todas las naciones del mundo. Se desarrolló durante seis años y un día (comenzó el 1 de septiembre de 1939 y finalizó el 2 de septiembre de 1945) enfrentando principalmente a las potencias del Eje (Alemania, Italia y Japón) contra los Aliados (Francia y Reino Unido), a los que acabarían uniéndose en 1941 Estados Unidos (tras el ataque japonés a Pearl Harbor) y la Unión Soviética (después del intento de Alemania por conquistar Stalingrado). El desencadenante oficial que hizo estallar el conflicto fue la invasión de Alemania a Polonia el 1 de septiembre de 1939 (una Alemania a la que se le prohibió rearmarse después de causar/ser derrotada en la PGM), lo que provocó la declaración inmediata de guerra de Francia y el Imperio británico. Las principales consecuencias de la Segunda Guerra Mundial fueron: la caída de los regímenes fascistas de Alemania e Italia, el fin del imperialismo japonés, la destrucción de una importante parte de Europa, Asia y Oceanía, la muerte de más de 60 millones de personas y la creación de la Organización de las Naciones Unidas el 24 de octubre de ese año mismo año para asegurar la paz internacional y la prevención de futuros conflictos.",
+      "year": 1939
+    },
+    "__00015__": {
       "id": 9,
       "age": 24,
       "name": "Liza",
       "image": "default.png",
       "password": "1234",
-      "rankings": "__00014__",
+      "rankings": "__00017__",
       "bestRank": 120
     },
-    "__00013__": {
+    "__00016__": {
       "id": 10,
       "age": 24,
       "name": "Melody",
       "image": "melodia.png",
       "password": "1234",
-      "rankings": "__00015__",
+      "rankings": "__00018__",
       "bestRank": 0
     },
-    "__00014__": {
+    "__00017__": {
       "0": 100,
       "1": 120,
       "2": 60
     },
-    "__00015__": {}
+    "__00018__": {}
   },
   "types": {
     "__00001__": "Educards",
@@ -97,9 +118,12 @@
     "__00009__": "Card",
     "__00010__": "Card",
     "__00011__": "Card",
-    "__00012__": "Player",
-    "__00013__": "Player",
-    "__00014__": "Array",
-    "__00015__": "Array"
+    "__00012__": "Card",
+    "__00013__": "Card",
+    "__00014__": "Card",
+    "__00015__": "Player",
+    "__00016__": "Player",
+    "__00017__": "Array",
+    "__00018__": "Array"
   }
 }
