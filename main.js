@@ -98,6 +98,14 @@ function main() {
     saveEducards(educards);
     console.log('Player successfully edited.');
   }
+
+    // Pedir numero aleatorios
+    if (args[0] === 'play')
+    {
+      const educards = getEducards();
+      const result = educards.getPlayingCards(args[1]);
+      console.log(result);
+    }
 }
 
 main();
