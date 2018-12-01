@@ -53,6 +53,44 @@ class AdmCards
     }
   }
 
+  // retorna: una cantidad cant de cartas aleatoriamente.
+  getPlayingCards(cant)
+  {
+    const indexsList = this.getRandomIndexs(cant);
+    const playingCards = indexsList.map(num => { return this.cards[num];});
+    return playingCards;
+  }
+
+  // retorna: una lista con una cantidad cant de numeros aleatorios irrepetibles.
+  getRandomIndexs(cant)
+  {
+    const indexsList = this.generateIndexs();
+    const result = [];
+    for (var i=0; i<cant; i++)
+    {
+      const index = this.getRandomInt(0, indexsList.length-1); // Obtengo un numero aleatorio dentre 0 y el maximo
+      const indexToAdd = indexsList[index]; // obtengo el index en la posicion del numero aleatorio.
+      result.push(indexToAdd); // Agrego el index a mi lista de resultados.
+      indexsList.splice(index,1); // Elimino el index ya usado de la lista original.
+    }
+    return result;
+  }
+
+  generateIndexs()
+  {
+    const maxIndex = this.cards.length;
+    const result = [];
+    for (var i=0; i<maxIndex; i++)
+    {
+      result.push(i);
+    }
+    return result;
+  }
+
+  getRandomInt(min, max) 
+  {
+    return Math.round(Math.random() * (max - min) + min);
+  }
 }
 
 module.exports = AdmCards;

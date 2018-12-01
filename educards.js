@@ -125,6 +125,12 @@ class Educards
     return this.admPlayers.getTheBestRankings();
   }
 
+  getPlayingCards(cant)
+  {
+    return this.admCards.getPlayingCards(parseInt(cant));
+  }
+
+
 
   save(filetittle) 
   {
