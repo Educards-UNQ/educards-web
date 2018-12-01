@@ -208,3 +208,13 @@ router.route('/cards').get(function (req, res)
  
 });
 
+// Obtener un mazo de 5 cartas para jugar.
+router.route('/play').get(function (req, res)
+{
+  const educards = getEducards();
+  const cards = educards.getPlayingCards(5);
+  res.status(200);
+  res.json(cards);
+ 
+});
+
