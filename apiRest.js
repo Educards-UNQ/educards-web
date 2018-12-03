@@ -172,7 +172,7 @@ router.route('/players').put(function(req, res)
   {
     throw new errors.InvalidNameError(newProfile.name);
   }
-  educards.editProfile(newProfile.id, newProfile.name, newProfile.image, newProfile.age, newProfile.password);
+  educards.editProfile(newProfile.id, newProfile.name, newProfile.age,newProfile.image, newProfile.password);
   const foundPlayer = educards.searchPlayer(newProfile.name);
   const player = 
   {
