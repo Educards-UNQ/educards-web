@@ -162,9 +162,9 @@ router.route('/rankings').post(function (req, res)
 });
 
 // Editar el perfil de un jugador
-router.route('/players/:id').put(function(req, res)
+router.route('/players').put(function(req, res)
 {
-  const idPlayer = parseInt(req.params.id);
+  //const idPlayer = parseInt(req.params.id);
   const newProfile = req.body;
 
   const educards = getEducards();
@@ -172,7 +172,7 @@ router.route('/players/:id').put(function(req, res)
   {
     throw new errors.InvalidNameError(newProfile.name);
   }
-  educards.editProfile(idPlayer, newProfile.name, newProfile.age, newProfile.password);
+  educards.editProfile(newProfile.id, newProfile.name, newProfile.age,newProfile.image, newProfile.password);
   const foundPlayer = educards.searchPlayer(newProfile.name);
   const player = 
   {
