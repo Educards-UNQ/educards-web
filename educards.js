@@ -105,9 +105,9 @@ class Educards
     this.admPlayers.addRank(parseInt(playerId), parseInt(playerRank));
   }
 
-  editProfile(idPlayer, newName, newAge, newPassword)
+  editProfile(idPlayer, newName, newAge, newImage, newPassword)
   {
-    this.admPlayers.editProfile(parseInt(idPlayer), newName, parseInt(newAge), newPassword);
+    this.admPlayers.editProfile(parseInt(idPlayer), newName, parseInt(newAge),newImage, newPassword);
   }
 
   hasValidName(newName)
