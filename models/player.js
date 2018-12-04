@@ -69,10 +69,11 @@ class Player
     }
   }
 
-  editProfile(newName, newAge, newPassword)
+  editProfile(newName, newAge,newImage, newPassword)
   {
     this.name = newName;
     this.age = newAge;
+    this.image = newImage;
     this.password = newPassword;
   }
 }

@@ -162,9 +162,9 @@ router.route('/rankings').post(function (req, res)
 });
 
 // Editar el perfil de un jugador
-router.route('/players/:id').put(function(req, res)
+router.route('/players').put(function(req, res)
 {
-  const idPlayer = parseInt(req.params.id);
+  //const idPlayer = parseInt(req.params.id);
   const newProfile = req.body;
 
   const educards = getEducards();
@@ -172,7 +172,7 @@ router.route('/players/:id').put(function(req, res)
   {
     throw new errors.InvalidNameError(newProfile.name);
   }
-  educards.editProfile(idPlayer, newProfile.name, newProfile.age, newProfile.password);
+  educards.editProfile(newProfile.id, newProfile.name, newProfile.age,newProfile.image, newProfile.password);
   const foundPlayer = educards.searchPlayer(newProfile.name);
   const player = 
   {
@@ -203,6 +203,16 @@ router.route('/cards').get(function (req, res)
 {
   const educards = getEducards();
   const cards = educards.getCards();
+  res.status(200);
+  res.json(cards);
+ 
+});
+
+// Obtener un mazo de 5 cartas para jugar.
+router.route('/play').get(function (req, res)
+{
+  const educards = getEducards();
+  const cards = educards.getPlayingCards(5);
   res.status(200);
   res.json(cards);
  

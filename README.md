@@ -18,10 +18,10 @@ Juego de cartas interactivo que busca modificar la forma en la que las personas 
 |Loguear un jugador |GET /api/players | Query: name: Liza password: 1234 | Status: 200 Json: {  "id": <idPlayer> "name”: "Liza",  "age”: 24, "image”: "default.png", "password": "1234" } |
 | Agregar ranking a un jugador | POST /api/rankings | Body: {  "id": <idPlayer>,  "rank": <gamePoints>} | Status: 201 Json: [20, 60, 30, 100] |
 | Obtener los mejores rankings | GET /api/rankings | | Status: 200 Json: [Ranking1, Ranking2, Ranking3]
-| Editar un jugador | PUT /api/players/<id> | Query: {name: Melody, age: 25, password: 1234} | Status: 201 Json: { "id": <idPlayer>,  "name”: "Melody", "age”: 25, "image”: "default.png", "password": "1234"} |
+| Editar un jugador | PUT /api/players/<id> | Body: {"id": <idPlayer>, "name": Melody, "age": 25,"image": "default.jpg" "password": "1234"} | Status: 201 Json: { "id": <idPlayer>,  "name”: "Melody", "age”: 25, "image”: "default.png", "password": "1234"} |
 | Crear una partida | POST /api/play | Query: cant: 5 theme: “Story” | Status: 201 Json: [card1, card2, card3, card4, card5] |
-| Obtener todas las cartas | GET /api/cards | | Status: 200 Json:[Card1, Card2, Card3, Card4, Card5] |
-
+| Obtener todas las cartas | GET /api/cards | | Status: 200 Json:[Card1, Card2, Card3, Card4, Card5, Card6, Card7, Card8] |
+| Iniciar una partida | GET /api/play | | Status: 200 Json:[Card1, Card2, Card3, Card4, Card5] |
 
 ## Registrode errores:
 
